@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Leemong 💗</title>
+<style>
+:root{--pink:#ffd9e7;--pink2:#fff0f5;--hot:#d94f7c;--ink:#74384b;--paper:#fff8e9;--rose:#f5a9c4}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(145deg,#ffe8f0,#ffc9dc);color:var(--ink);font-family:"Trebuchet MS",system-ui,sans-serif;min-height:100vh}
+button{font:inherit;cursor:pointer;border:0}
+.top{position:sticky;top:0;z-index:3;background:#fff0f5dd;backdrop-filter:blur(8px);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #f7b9ce}
+.brand{font-weight:800;letter-spacing:.4px}.music{border-radius:50%;width:42px;height:42px;background:#ffe0eb;color:#a32e5a;font-size:20px}
+main{max-width:760px;margin:auto;padding:18px 15px 45px}
+.page{display:none;animation:fade .35s ease}.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero{text-align:center;padding:25px 8px 10px}
+.crown{font-size:35px}.eyebrow{letter-spacing:2px;text-transform:uppercase;font-size:12px;color:#a94e6e}
+h1{font-family:Georgia,serif;font-size:clamp(2.2rem,8vw,4rem);line-height:1.05;margin:12px 0;color:#b34468}
+h2{font-family:Georgia,serif;text-align:center;font-size:2rem;color:#b34468;margin:10px 0 18px}
+.subtitle{line-height:1.7;max-width:430px;margin:0 auto 20px}
+.envelope-wrap{display:flex;justify-content:center;margin:25px 0 20px}
+.envelope{position:relative;width:min(340px,90vw);height:205px;background:#f6a8c2;border:3px solid #d87598;border-radius:8px;box-shadow:0 12px 25px #b94b7030;display:grid;place-items:center;overflow:hidden;transform:rotate(-1deg)}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49%,#e987a9 50%,transparent 51%),linear-gradient(35deg,transparent 49%,#e987a9 50%,transparent 51%)}
+.seal{position:relative;z-index:1;border-radius:50%;background:#fff0f5;border:2px solid #d87598;width:64px;height:64px;display:grid;place-items:center;font-size:30px;box-shadow:0 3px 9px #9c3c5c33}
+.btn{background:var(--hot);color:white;border-radius:999px;padding:12px 20px;box-shadow:0 5px 0 #b43e66;transition:transform .15s;margin:5px}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #b43e66}
+.btn.secondary{background:#fff0f5;color:#a83d62;box-shadow:0 4px 0 #f0adc4}
+.card{background:#fff5f8;border:1px solid #f3b5cb;border-radius:20px;padding:20px;box-shadow:0 9px 24px #9b3b5d15;margin:14px 0}
+.letter{background:var(--paper);padding:25px 21px;border-radius:8px;border:1px solid #e9d4b6;box-shadow:0 7px 18px #9b3b5d15;line-height:1.85;white-space:pre-line}
+.letter p{margin-top:0}.signature{text-align:right;font-family:Georgia,serif;font-style:italic;font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.memory{background:white;padding:9px 9px 13px;border-radius:7px;box-shadow:0 5px 15px #8c34541c;transform:rotate(-1deg)}
+.memory:nth-child(even){transform:rotate(1.5deg)}
+.photo{width:100%;aspect-ratio:1/1;object-fit:cover;background:#ffe1ec;border-radius:4px;display:block}
+.memory label{display:block;text-align:center;padding:9px 2px 0;font-size:13px}
+.memory input{width:100%;font-size:11px;margin-top:7px}
+.small{font-size:12px;opacity:.8;text-align:center;line-height:1.6}
+.reasons{display:grid;gap:10px}
+.reason{background:#fff0f5;border:1px solid #f4b4cb;border-radius:14px;padding:13px 15px}
+.reason b{color:#c0446c;margin-right:8px}
+.cake{font-size:105px;text-align:center;filter:drop-shadow(0 7px 5px #c44e7720)}
+.final-heart{font-size:100px;text-align:center;line-height:1.3;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{transform:scale(1.08)}}
+.nav{display:flex;justify-content:space-between;gap:8px;margin-top:20px;flex-wrap:wrap}
+.nav button{flex:1;min-width:110px}
+footer{text-align:center;font-size:12px;padding:20px;color:#9b4967}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card{padding:26px}.letter{padding:32px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand">♡ a little world for Leemong</div><button class="music" id="musicBtn" aria-label="Toggle music" title="Play a little tune">♫</button></header>
+<main>
+<section class="page active" id="home">
+<div class="hero"><div class="crown">♕</div><div class="eyebrow">made with love by Aadarsh</div><h1>Happy Birthday,<br>Leemong 💗</h1><p class="subtitle">Another year of you, and I'm so lucky to have you. I made a tiny corner of the internet just for you, filled with our memories and all the things I want you to know.</p></div>
+<div class="envelope-wrap"><button class="envelope" onclick="showPage('letter')" aria-label="Open your birthday letter"><span class="seal">💌</span></button></div>
+<div style="text-align:center"><button class="btn" onclick="showPage('letter')">Tap to open your letter 💗</button></div>
+<p class="small">A tiny birthday story, made just for you.</p>
+</section>
+
+<section class="page" id="letter">
+<h2>One little letter 💌</h2>
+<div class="letter">
+<p>My Leemong,</p>
+Happy Birthday, my love! 💗
+
+I wish I could be there with you today, give you the biggest hug, and see your smile in person. Even from far away, you make my days feel more special just by being in them.
+
+Thank you for being you, for the little moments we share, for making me smile, and for staying with me through the good days and the difficult ones. I hope this new year of your life brings you happiness, peace, and all the beautiful things your heart wishes for.
+
+No website or letter could ever explain how much you mean to me, but I hope this little surprise makes you smile. Keep being your lovely self, okay?
+
+I love you so much, Leemong. Today, tomorrow, and always. 💗
+<p class="signature">Forever yours,<br>Aadarsh ♡</p>
+</div>
+<div class="nav"><button class="btn secondary" onclick="showPage('home')">← Back</button><button class="btn" onclick="showPage('memories')">Our memories →</button></div>
+</section>
+
+<section class="page" id="memories">
+<h2>Our little memories 📸</h2>
+<p class="small">Tap “Choose photo” on each card to add your own pictures. They stay in this page while it's open.</p>
+<div class="grid" id="memoryGrid"></div>
+<div class="nav"><button class="btn secondary" onclick="showPage('letter')">← Letter</button><button class="btn" onclick="showPage('reasons')">A few reasons →</button></div>
+</section>
+
+<section class="page" id="reasons">
+<h2>10 reasons I love you 💗</h2>
+<div class="reasons">
+<div class="reason"><b>01</b> Your smile can make my day better.</div>
+<div class="reason"><b>02</b> You make ordinary moments feel special.</div>
+<div class="reason"><b>03</b> I can be myself with you.</div>
+<div class="reason"><b>04</b> Your little habits are so you.</div>
+<div class="reason"><b>05</b> You make me laugh even when I don't expect it.</div>
+<div class="reason"><b>06</b> I love the way we make memories together.</div>
+<div class="reason"><b>07</b> You make distance feel a little smaller.</div>
+<div class="reason"><b>08</b> I admire the person you are becoming.</div>
+<div class="reason"><b>09</b> You make me want to be more thoughtful.</div>
+<div class="reason"><b>10</b> Because you're you, and that's my favourite thing. ♡</div>
+</div>
+<div class="nav"><button class="btn secondary" onclick="showPage('memories')">← Memories</button><button class="btn" onclick="showPage('cake')">Make a wish →</button></div>
+</section>
+
+<section class="page" id="cake">
+<h2>Make a birthday wish 🎂</h2>
+<div class="card"><div class="cake" id="cakeEmoji">🎂</div><p style="text-align:center">Close your eyes, make a wish, and tap the button!</p><div style="text-align:center"><button class="btn" onclick="wish()">Make a wish 💗</button></div><p class="small" id="wishText" aria-live="polite"></p></div>
+<div class="nav"><button class="btn secondary" onclick="showPage('reasons')">← Back</button><button class="btn" onclick="showPage('final')">Final surprise →</button></div>
+</section>
+
+<section class="page" id="final">
+<h2>One last thing…</h2>
+<div class="card" style="text-align:center"><div class="final-heart">💗</div><h2 style="font-size:1.8rem">I love you, Leemong!</h2><p>Thank you for being part of my life and for making so many moments special. I hope your birthday is as lovely as you are.</p><p><b>Happy Birthday, my favourite person ♡</b></p><p class="signature">— Aadarsh</p><button class="btn" onclick="showPage('home')">Read our story again ↺</button></div>
+</section>
+</main>
+<footer>Made with lots of love 💗 · Aadarsh for Leemong</footer>
+<script>
+const pages = ['home','letter','memories','reasons','cake','final'];
+function showPage(id){pages.forEach(p=>document.getElementById(p).classList.toggle('active',p===id));window.scrollTo({top:0,behavior:'smooth'});}
+const captions=['My favourite memory ♡','Our silly moments ♡','Your beautiful smile ♡','A moment I keep close ♡','Us, being us ♡','One to remember ♡','My favourite person ♡','Little things, big feelings ♡','More memories together ♡'];
+const grid=document.getElementById('memoryGrid');
+captions.forEach((caption,i)=>{
+ const card=document.createElement('div');card.className='memory';
+ const img=document.createElement('img');img.className='photo';img.alt=caption;img.src='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect width="100%" height="100%" fill="#ffe1ec"/><text x="50%" y="46%" font-size="54" text-anchor="middle" fill="#d87598">♡</text><text x="50%" y="62%" font-family="Arial" font-size="16" text-anchor="middle" fill="#a94e6e">Your photo here</text></svg>`);
+ const label=document.createElement('label');label.textContent=caption;
+ const input=document.createElement('input');input.type='file';input.accept='image/*';input.setAttribute('aria-label','Choose memory photo '+(i+1));
+ input.addEventListener('change',()=>{const file=input.files&&input.files[0];if(file){const reader=new FileReader();reader.onload=e=>img.src=e.target.result;reader.readAsDataURL(file);}});
+ card.append(img,label,input);grid.append(card);
+});
+let audioCtx=null,osc=null;
+document.getElementById('musicBtn').addEventListener('click',()=>{
+ const btn=document.getElementById('musicBtn');
+ try{
+ if(osc){osc.stop();osc=null;btn.textContent='♫';return;}
+ audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
+ osc=audioCtx.createOscillator();const gain=audioCtx.createGain();
+ osc.type='sine';osc.frequency.value=523.25;gain.gain.value=.025;osc.connect(gain);gain.connect(audioCtx.destination);osc.start();btn.textContent='♪';
+ }catch(e){alert('Music is not supported in this preview. You can still enjoy the surprise!');}
+});
+function wish(){document.getElementById('cakeEmoji').textContent='🕯️💗🕯️';document.getElementById('wishText').textContent='Wish made! I hope this year brings you so much happiness, Leemong. 💗';}
+</script>
+</body>
+</html>
